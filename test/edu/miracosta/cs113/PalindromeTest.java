@@ -6,6 +6,8 @@ import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 /**
  * PalindromeTest : a test class for isPalindrome, a method intended to utilize stacks to evaluate if a given
  * string is a palindrome.
@@ -44,7 +46,34 @@ public class PalindromeTest {
 
         // TODO:
         // Implement this method body using your ArrayListStack. Be mindful of your algorithm!
-        return false;
+        ArrayListStack<String> stack1 = new ArrayListStack<>();
+        ArrayListStack<String> stack2 = new ArrayListStack<>();
+        if (s == null)
+        {
+            throw new IllegalArgumentException();
+        }
+        s = s.toLowerCase();
+        s = s.replaceAll(" ", "");
+        if (s.length() % 2 == 1)
+        {
+            s = s.substring(0, s.length() / 2) + s.substring((s.length() / 2) + 1);
+        }
+        for (int i = 0; i < s.length(); i++)
+        {
+            stack1.push(Character.toString(s.charAt(i)));
+        }
+        for (int i = 0; i < s.length() / 2; i++)
+        {
+            stack2.push(stack1.pop());
+        }
+        while (!stack1.empty())
+        {
+            if (!stack1.pop().equals(stack2.pop()))
+            {
+                return false;
+            }
+        }
+        return true;
 
     } // End of method isPalindrome
 
