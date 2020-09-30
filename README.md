@@ -17,7 +17,8 @@ You are provided with a `StackInterface` to **implement your stack, make sure to
 
 Make sure to **provide a sequence diagram** for `isPalindrome()`, it should include more details than just the steps outlined above.  Add the image (PNG, JPEG, etc.) in markdown in the space below:
 
-**[//Insert Sequence Diagram//]**
+![isPalindrome Sequence diagram](https://user-images.githubusercontent.com/70171720/94633829-4d8d2880-0283-11eb-83e4-5f0a65afae95.png)
+[Topic 06 - Stacks + Queues + Deques (FULL).pdf](https://github.com/miracosta-college/cs113-hw05-stackqueue-cewaite/files/5302702/Topic.06.-.Stacks.%2B.Queues.%2B.Deques.FULL.pdf)
 
 ----------
 
